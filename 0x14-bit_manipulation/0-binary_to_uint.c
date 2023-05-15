@@ -8,7 +8,7 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-unsigned int a, v = 0;
+unsigned int a, valeur = 0;
 
 if (!b)
     return 0;
@@ -17,10 +17,10 @@ for (int i = 0; b[i] != '\0'; i++) {
     if (b[i] != '0' && b[i] != '1')
         return 0;
     
-    v = v << 1;
+    valeur = valeur << 1;
     if (b[i] == '1')
-        v |= 1;
+        valeur |= 1;
 }
 
-return v;
+return valeur;
 }
